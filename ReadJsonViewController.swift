@@ -1,3 +1,10 @@
+import UIKit
+class ViewController: UIViewController{
+
+    var myResponseObject:ResponseObject?
+    @IBOutlet var mainStackView: UIStackView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
   if let path = NSBundle.mainBundle().pathForResource("sample", ofType: "json") {
             do {
                 let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
@@ -14,3 +21,5 @@
         } else {
             print("Invalid filename/path.")
         }
+  }
+}
